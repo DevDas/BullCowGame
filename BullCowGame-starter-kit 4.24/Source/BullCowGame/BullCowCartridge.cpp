@@ -162,7 +162,7 @@ void UBullCowCartridge::SpawnBulls(FBullCowCount Count)
 {
     DestroyBull();
 
-    for (int32 i = 0; i < Count.Bulls; i++)
+	for (int32 i = 0; i < Count.Bulls; i++)
     {
         FTransform Transform = BullSpawnPoints->GetTransform();
         FVector Location = Transform.GetLocation();
@@ -170,7 +170,7 @@ void UBullCowCartridge::SpawnBulls(FBullCowCount Count)
         Transform.SetLocation(Location);
         ACow* Bull = GetWorld()->SpawnActor<ACow>(BP_BullClass, Transform);
         Bulls.Add(Bull);
-    }  
+    }
 }
 
 void UBullCowCartridge::SpawnCows(FBullCowCount Count)
